@@ -17,7 +17,7 @@ git submodule update --init --recursive
 ```
 
 
-## Included Packages
+## Included 3rd Party Packages
 
 The RSLA package includes the following third-party dependencies:
 
