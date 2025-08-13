@@ -23,6 +23,10 @@ git submodule update --init --recursive <path_to_repo>
 To add new submodule, run:
 ```bash
 git submodule add -f <git_URL> <path_to_clone>
+git config -f .gitmodules submodule.<path_to_clone>.ignore dirty
+git add .gitmodules
+git config submodule.<path_to_clone>.ignore dirty
+git commit -m "[]"
 ```
 
 ## Included 3rd Party Packages
