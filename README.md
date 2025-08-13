@@ -31,6 +31,7 @@ The RSLA package includes the following third-party dependencies:
 
 * [Hugging Face Transformers](https://github.com/huggingface/transformers) - State-of-the-art Natural Language Processing library
 * [TurboRAG](https://github.com/turborag/TurboRAG) - High-performance Retrieval-Augmented Generation framework
+* [Prismatic VLMs](https://github.com/TRI-ML/prismatic-vlms) - Vision-Language Models for Robotic Manipulation
 
 
 ## Setup
@@ -52,6 +53,11 @@ Follow these steps to set up the environment:
    #### TurboRAG (conda env: turborag)
    ```bash
    bash ./setup/TurboRAG_setup.sh
+   ```
+
+   #### Prismatic VLMs (conda env: prismatic)
+   ```bash
+   bash ./setup/prismaticVLMs.sh
    ```
 
 # Contributors
