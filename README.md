@@ -18,7 +18,6 @@ Or if you want to clone specific repository, run:
 
 ```bash
 git submodule update --init --recursive <path_to_repo>
-
 ```
 
 
