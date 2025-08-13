@@ -1,12 +1,12 @@
 [submodule "third_party/transformers"]
 	path = third_party/transformers
 	url = https://github.com/huggingface/transformers.git
-	ignore = all
+	ignore = dirty
 [submodule "third_party/TurboRAG"]
 	path = third_party/TurboRAG
 	url = https://github.com/MooreThreads/TurboRAG.git
-	ignore = all
+	ignore = dirty
 [submodule "third_party/prismatic-vlms"]
 	path = third_party/prismatic-vlms
 	url = https://github.com/TRI-ML/prismatic-vlms.git
-	ignore = all
+	ignore = dirty
