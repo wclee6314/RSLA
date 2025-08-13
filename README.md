@@ -1,7 +1,5 @@
 # RSLA (Robot, Sensor, Language, Action)
 
-
-
 ## Clone
 
 To clone this repository with all submodules, run:
@@ -14,6 +12,13 @@ Or if you've already cloned the repository without `--recursive`, run:
 
 ```bash
 git submodule update --init --recursive
+```
+
+Or if you want to clone specific repository, run:
+
+```bash
+git submodule update --init --recursive <path_to_repo>
+
 ```
 
 
