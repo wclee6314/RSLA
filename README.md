@@ -31,7 +31,7 @@ The RSLA package includes the following third-party dependencies:
 
 * [Hugging Face Transformers](https://github.com/huggingface/transformers) - State-of-the-art Natural Language Processing library
 * [TurboRAG](https://github.com/turborag/TurboRAG) - High-performance Retrieval-Augmented Generation framework
-* [Prismatic VLMs](https://github.com/TRI-ML/prismatic-vlms) - Vision-Language Models for Robotic Manipulation
+* [Prismatic VLMs](https://github.com/TRI-ML/prismatic-vlms) - Vision-Language Models
 
 
 ## Setup
