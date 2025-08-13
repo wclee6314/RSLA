@@ -1,3 +1,6 @@
 [submodule "third_party/transformers"]
 	path = third_party/transformers
 	url = https://github.com/huggingface/transformers.git
+[submodule "third_party/TurboRAG"]
+	path = third_party/TurboRAG
+	url = https://github.com/MooreThreads/TurboRAG.git
