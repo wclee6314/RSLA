@@ -20,7 +20,6 @@ Or if you want to clone specific repository, run:
 git submodule update --init --recursive <path_to_repo>
 ```
 
-
 ## Included 3rd Party Packages
 
 The RSLA package includes the following third-party dependencies:
