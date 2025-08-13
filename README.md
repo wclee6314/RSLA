@@ -45,3 +45,6 @@ Follow these steps to set up the environment:
    ```bash
    bash ./setup/TurboRAG_setup.sh
    ```
+
+# Contributors
+- woo-cheol lee (wclee@dnotitia.com)
