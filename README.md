@@ -20,6 +20,11 @@ Or if you want to clone specific repository, run:
 git submodule update --init --recursive <path_to_repo>
 ```
 
+To add new submodule, run:
+```bash
+git submodule add -f <git_URL> <directory_to_clone>
+```
+
 ## Included 3rd Party Packages
 
 The RSLA package includes the following third-party dependencies:
