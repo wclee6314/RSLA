@@ -17,7 +17,7 @@ git submodule update --init --recursive
 Or if you want to clone specific repository, run:
 
 ```bash
-git submodule update --init --recursive <path_to_repo>
+git submodule update --init --recursive <path_to_repo(ex., third_party/TurboRAG)>
 ```
 
 To add new submodule, run:
