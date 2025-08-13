@@ -1,4 +1,4 @@
-# RSLA
+# RSLA (Robot, Sensor, Language, Action)
 
 
 
