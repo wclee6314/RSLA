@@ -43,7 +43,7 @@ Follow these steps to set up the environment:
    bash ./setup/miniconda_setup.sh
    ```
 
-2. **Set up Dependencies**:
+2. **Set up Envs**:
    After conda is installed and available in your environment, run:
    #### Transformers (conda env: transformers)
    ```bash
