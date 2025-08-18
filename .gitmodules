@@ -13,5 +13,4 @@
 [submodule "third_party/roformer"]
 	path = third_party/roformer
 	url = https://github.com/ZhuiyiTechnology/roformer
-[submodule "\"third_party/roformer\""]
 	ignore = dirty
