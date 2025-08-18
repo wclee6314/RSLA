@@ -20,10 +20,20 @@ else
   exit 1
 fi
 
+
+# (신규) Anaconda 채널 ToS 자동 수락 시도
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main >/dev/null 2>&1 || true
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r    >/dev/null 2>&1 || true
+
 # Create env if it doesn't exist
 if ! conda env list | awk '{print $1}' | grep -qx "$ENV_NAME"; then
-  conda create -y -n "$ENV_NAME" "python=$PY_VER"
+  # 기본 시도: defaults 채널
+  if ! conda create -y -n "$ENV_NAME" "python=$PY_VER"; then
+    echo "[warn] defaults 채널에서 환경 생성 실패. conda-forge로 재시도합니다."
+    conda create -y -n "$ENV_NAME" -c conda-forge --override-channels "python=$PY_VER"
+  fi
 fi
+
 
 TURBORAG_DIR="$ROOT_DIR/third_party/TurboRAG"
 cd "$TURBORAG_DIR"
@@ -59,3 +69,6 @@ conda run -n "$ENV_NAME" python -m pip check
 
 # (선택) 확인용
 conda run -n "$ENV_NAME" python -V
+
+# declare success
+echo "[info] TurboRAG environment setup complete."
