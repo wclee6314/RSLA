@@ -34,6 +34,9 @@ The RSLA package includes the following third-party dependencies:
 * [roformer](https://github.com/ZhuiyiTechnology/roformer) - roformer (RoPE)
 * [Prismatic VLMs](https://github.com/TRI-ML/prismatic-vlms) - Vision-Language Models
 * [openvla](https://github.com/openvla/openvla) - An Open-Source Vision-Language-Action Model
+* [open_x_embodiment](https://github.com/google-deepmind/open_x_embodiment) - open-sourced robotic data in the same unified format, for downstream tasks.
+
+
 
 
 ## Setup
