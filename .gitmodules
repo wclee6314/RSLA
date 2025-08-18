@@ -10,3 +10,8 @@
 	path = third_party/prismatic-vlms
 	url = https://github.com/TRI-ML/prismatic-vlms.git
 	ignore = dirty
+[submodule "third_party/roformer"]
+	path = third_party/roformer
+	url = https://github.com/ZhuiyiTechnology/roformer
+[submodule "\"third_party/roformer\""]
+	ignore = dirty
