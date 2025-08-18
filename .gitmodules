@@ -18,3 +18,7 @@
 	path = third_party/open_x_embodiment
 	url = https://github.com/google-deepmind/open_x_embodiment
 	ignore = dirty
+[submodule "third_party/openvla"]
+	path = third_party/openvla
+	url = https://github.com/openvla/openvla.git
+	ignore = dirty
