@@ -61,10 +61,5 @@ Follow these steps to set up the environment:
    bash ./setup/prismaticVLMs.sh
    ```
 
-   #### roformer (NA)
-   ```bash
-   NA
-   ```
-
 # Contributors
 - woo-cheol lee (wclee@dnotitia.com)
