@@ -42,3 +42,4 @@ third_party/*
 # Logs and databases
 *.log
 *.sqlite
+Miniconda3-latest-*.sh
