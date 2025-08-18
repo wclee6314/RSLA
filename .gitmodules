@@ -14,3 +14,7 @@
 	path = third_party/roformer
 	url = https://github.com/ZhuiyiTechnology/roformer
 	ignore = dirty
+[submodule "third_party/open_x_embodiment"]
+	path = third_party/open_x_embodiment
+	url = https://github.com/google-deepmind/open_x_embodiment
+	ignore = dirty
