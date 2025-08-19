@@ -2,6 +2,7 @@
 ```bash
 git clone https://github.com/wclee6314/RSLA.git
 ```
+following two submodules are required
 ```bash
 git submodule update --init --recursive third_party/openvla
 ```
