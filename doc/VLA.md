@@ -1,4 +1,4 @@
-# repository download
+# Repository download
 ```bash
 git clone https://github.com/wclee6314/RSLA.git
 ```
@@ -9,13 +9,12 @@ git submodule update --init --recursive third_party/openvla
 git submodule update --init --recursive third_party/LIBERO
 ```
 
-# env setup (conda: openvla)
+# Env setup (conda: openvla)
 ```bash
 bash ./setup/openvla_setup.sh
 ```
 
 # Download fine-tuned OpenVLA model via LoRA (r=32) on four LIBERO task suites
-
 
 ### libero-spatial
 ```bash
