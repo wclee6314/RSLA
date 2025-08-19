@@ -15,9 +15,7 @@ bash ./setup/openvla_setup.sh
 ```
 
 # download fine-tuned OpenVLA model via LoRA (r=32) on four LIBERO task suites
-| ![libero-spatial](./video/libero_spatial.gif) | ![libero-object](./video/libero_object.gif) | ![libero-goal](./video/libero_goal.gif) | ![libero-10](./video/libero_10.gif) |
-|---|---|---|---|
-| **libero-spatial** | **libero-object** | **libero-goal** | **libero-10** |
+
 
 ### libero-spatial
 ```bash
@@ -55,6 +53,10 @@ hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
 # deploy (evaluation)
+| ![libero-spatial](./video/libero_spatial.gif) | ![libero-object](./video/libero_object.gif) | ![libero-goal](./video/libero_goal.gif) | ![libero-10](./video/libero_10.gif) |
+|---|---|---|---|
+| **libero-spatial** | **libero-object** | **libero-goal** | **libero-10** |
+
 ### libero-spatial
 ```bash
 OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
