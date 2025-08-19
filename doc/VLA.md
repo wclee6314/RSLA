@@ -91,7 +91,7 @@ cd OPENVLA_PATH
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-10   --task_suite_name libero_10   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
-# 리뷰 해 볼 만한 페이퍼 리스트 
+# 리뷰 해 볼 만한 Physical AI 관련 페이퍼 리스트 
 ### 모델
 - [OpenVLA] Kim, M. J., Pertsch, K., Karamcheti, S., Xiao, T., Balakrishna, A., Nair, S., Rafailov, R., Foster, E., Lam, G., Sanketi, P., Vuong, Q., Kollar, T., Burchfiel, B., Tedrake, R., Sadigh, D., Levine, S., Liang, P., & Finn, C. (2024). OpenVLA: An Open-Source Vision-Language-Action Model. http://arxiv.org/abs/2406.09246
 - [PrismaticVLM] Karamcheti, S., Nair, S., Balakrishna, A., Liang, P., Kollar, T., & Sadigh, D. (2024). Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models. http://arxiv.org/abs/2402.07865
