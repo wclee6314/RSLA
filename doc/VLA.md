@@ -51,7 +51,10 @@ mkdir -p "$LOCAL_DIR"
 hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
-# deploy (evaluation)
+# Custom fine tuning
+Come soon
+
+# Deploy (evaluation)
 | ![libero-spatial](./video/libero_spatial.gif) | ![libero-object](./video/libero_object.gif) | ![libero-goal](./video/libero_goal.gif) | ![libero-10](./video/libero_10.gif) |
 |---|---|---|---|
 | **libero-spatial** | **libero-object** | **libero-goal** | **libero-10** |
