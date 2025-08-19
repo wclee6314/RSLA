@@ -106,4 +106,4 @@ python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --
 - [VAST] Chen, S., Li, H., Wang, Q., Zhao, Z., Sun, M., Zhu, X., & Liu, J. (2023). VAST: A Vision-Audio-Subtitle-Text Omni-Modality Foundation Model and Dataset. http://arxiv.org/abs/2305.18500
 
 ### 데이터셋
-- [Open X-Embodiment] Embodiment Collaboration, O’Neill, A., Rehman, A., Gupta, A., Maddukuri, A., Gupta, A., Padalkar, A., Lee, A., Pooley, A., Gupta, A., Mandlekar, A., Jain, A., Tung, A., Bewley, A., Herzog, A., Irpan, A., Khazatsky, A., Rai, A., Gupta, A., … Lin, Z. (2025). Open X-Embodiment: Robotic Learning Datasets and RT-X Models. http://arxiv.org/abs/2310.08864
+- [OpenXEmbodiment] Embodiment Collaboration, O’Neill, A., Rehman, A., Gupta, A., Maddukuri, A., Gupta, A., Padalkar, A., Lee, A., Pooley, A., Gupta, A., Mandlekar, A., Jain, A., Tung, A., Bewley, A., Herzog, A., Irpan, A., Khazatsky, A., Rai, A., Gupta, A., … Lin, Z. (2025). Open X-Embodiment: Robotic Learning Datasets and RT-X Models. http://arxiv.org/abs/2310.08864
