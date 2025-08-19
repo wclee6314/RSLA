@@ -15,7 +15,8 @@ INSTALL_FLASH_ATTN="${INSTALL_FLASH_ATTN:-1}"  # 1=설치, 0=건너뛰기
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-REPO_DIR="$ROOT_DIR/third_party/openvla"
+OPENVLA_DIR="$ROOT_DIR/third_party/openvla"   # 변경: OPENVLA_DIR로 사용
+LIBERO_DIR="$ROOT_DIR/third_party/LIBERO"
 
 log()   { printf "\033[1;32m[INFO]\033[0m %s\n" "$*"; }
 warn()  { printf "\033[1;33m[WARN]\033[0m %s\n" "$*"; }
@@ -49,7 +50,7 @@ ensure_conda() {
       # shellcheck disable=SC1090
       source "$BASE/etc/profile.d/conda.sh"
     fi
-  elif [ -n "${CONDA_EXE:-}" ]; then
+  elif [ -n "${CONDA_EXE:-}" ] ; then
     HOOK="$( "$CONDA_EXE" shell.bash hook 2>/dev/null || true )"
     [ -n "$HOOK" ] && eval "$HOOK"
   fi
@@ -96,12 +97,38 @@ else
 fi
 
 # ===== OpenVLA 설치 =====
-log "리포지토리로 이동: $REPO_DIR"
-cd "$REPO_DIR" 2>/dev/null || { error "경로를 찾을 수 없습니다: $REPO_DIR  (third_party/openvla 가 있어야 합니다)"; exit 1; }
+log "리포지토리로 이동: $OPENVLA_DIR"
+cd "$OPENVLA_DIR" 2>/dev/null || { error "경로를 찾을 수 없습니다: $OPENVLA_DIR  (third_party/openvla 가 있어야 합니다)"; exit 1; }
 
 log "pip 업그레이드 및 editable 설치"
 python -m pip install --upgrade pip
 python -m pip install -e .
+
+# # ===== LIBERO 설치 =====
+# log "LIBERO 설치 준비: $LIBERO_DIR"
+# if [ -d "$LIBERO_DIR" ]; then
+#   log "리포지토리로 이동: $LIBERO_DIR"
+#   cd "$LIBERO_DIR" 2>/dev/null || { error "경로 이동 실패: $LIBERO_DIR"; exit 1; }
+
+#   log "LIBERO를 editable 모드로 설치"
+#   python -m pip install -e .
+# else
+#   error "경로를 찾을 수 없습니다: $LIBERO_DIR  (third_party/LIBERO 가 있어야 합니다)"
+#   exit 1
+# fi
+
+# # ===== LIBERO 추가 requirements 설치 =====
+# REQ_FILE="$OPENVLA_DIR/experiments/robot/libero/libero_requirements.txt"
+# log "OpenVLA 디렉터리로 복귀: $OPENVLA_DIR"
+# cd "$OPENVLA_DIR" 2>/dev/null || { error "경로를 찾을 수 없습니다: $OPENVLA_DIR"; exit 1; }
+
+# if [ -f "$REQ_FILE" ]; then
+#   log "LIBERO 관련 requirements 설치: $REQ_FILE"
+#   python -m pip install -r "$REQ_FILE"
+# else
+#   error "요구사항 파일을 찾을 수 없습니다: $REQ_FILE"
+#   exit 1
+# fi
 
 # ===== FlashAttention2 (고정: 2.5.5, 선택) =====
 if [ "$INSTALL_FLASH_ATTN" -eq 1 ] && [ "$USE_CUDA" -eq 1 ]; then

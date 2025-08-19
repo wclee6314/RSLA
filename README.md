@@ -36,9 +36,6 @@ The RSLA package includes the following third-party dependencies:
 * [openvla](https://github.com/openvla/openvla) - An Open-Source Vision-Language-Action Model
 * [open_x_embodiment](https://github.com/google-deepmind/open_x_embodiment) - open-sourced robotic data in the same unified format, for downstream tasks.
 
-
-
-
 ## Setup
 
 Follow these steps to set up the environment:
