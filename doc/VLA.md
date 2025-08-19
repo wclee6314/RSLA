@@ -100,6 +100,7 @@ python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --
 - [DINOv2] Oquab, M., Darcet, T., Moutakanni, T., Vo, H., Szafraniec, M., Khalidov, V., Fernandez, P., Haziza, D., Massa, F., El-Nouby, A., Assran, M., Ballas, N., Galuba, W., Howes, R., Huang, P.-Y., Li, S.-W., Misra, I., Rabbat, M., Sharma, V., … Bojanowski, P. (2024). DINOv2: Learning Robust Visual Features without Supervision. http://arxiv.org/abs/2304.07193
 - [CLIP] Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning Transferable Visual Models From Natural Language Supervision. http://arxiv.org/abs/2103.00020
 - [SigLIP] Zhai, X., Mustafa, B., Kolesnikov, A., Beyer, L., & Deepmind, G. (n.d.). Sigmoid Loss for Language Image Pre-Training. https://github.
+- [VAST] Chen, S., Li, H., Wang, Q., Zhao, Z., Sun, M., Zhu, X., & Liu, J. (2023). VAST: A Vision-Audio-Subtitle-Text Omni-Modality Foundation Model and Dataset. http://arxiv.org/abs/2305.18500
 
 ### 데이터셋
 - [Open X-Embodiment] Embodiment Collaboration, O’Neill, A., Rehman, A., Gupta, A., Maddukuri, A., Gupta, A., Padalkar, A., Lee, A., Pooley, A., Gupta, A., Mandlekar, A., Jain, A., Tung, A., Bewley, A., Herzog, A., Irpan, A., Khazatsky, A., Rai, A., Gupta, A., … Lin, Z. (2025). Open X-Embodiment: Robotic Learning Datasets and RT-X Models. http://arxiv.org/abs/2310.08864
