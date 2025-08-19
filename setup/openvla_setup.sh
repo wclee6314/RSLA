@@ -104,31 +104,56 @@ log "pip 업그레이드 및 editable 설치"
 python -m pip install --upgrade pip
 python -m pip install -e .
 
-# # ===== LIBERO 설치 =====
-# log "LIBERO 설치 준비: $LIBERO_DIR"
-# if [ -d "$LIBERO_DIR" ]; then
-#   log "리포지토리로 이동: $LIBERO_DIR"
-#   cd "$LIBERO_DIR" 2>/dev/null || { error "경로 이동 실패: $LIBERO_DIR"; exit 1; }
+# ===== LIBERO 설치 =====
+log "LIBERO 설치 준비: $LIBERO_DIR"
+if [ -d "$LIBERO_DIR" ]; then
+  log "리포지토리로 이동: $LIBERO_DIR"
+  cd "$LIBERO_DIR" 2>/dev/null || { error "경로 이동 실패: $LIBERO_DIR"; exit 1; }
 
-#   log "LIBERO를 editable 모드로 설치"
-#   python -m pip install -e .
-# else
-#   error "경로를 찾을 수 없습니다: $LIBERO_DIR  (third_party/LIBERO 가 있어야 합니다)"
-#   exit 1
-# fi
+  log "LIBERO를 editable 모드로 설치"
+  python -m pip install -e .
 
-# # ===== LIBERO 추가 requirements 설치 =====
-# REQ_FILE="$OPENVLA_DIR/experiments/robot/libero/libero_requirements.txt"
-# log "OpenVLA 디렉터리로 복귀: $OPENVLA_DIR"
-# cd "$OPENVLA_DIR" 2>/dev/null || { error "경로를 찾을 수 없습니다: $OPENVLA_DIR"; exit 1; }
+  python -m pip install imageio[ffmpeg]
+  python -m pip install --no-deps \
+    robosuite==1.4.1 \
+    bddl \
+    easydict \
+    cloudpickle \
+    gym
+  python -m pip install --no-deps \
+    opencv-python-headless==4.9.0.80 \
+    mujoco \
+    pyopengl \
+    numba \
+    llvmlite \
+    future \
+    pynput
 
-# if [ -f "$REQ_FILE" ]; then
-#   log "LIBERO 관련 requirements 설치: $REQ_FILE"
-#   python -m pip install -r "$REQ_FILE"
-# else
-#   error "요구사항 파일을 찾을 수 없습니다: $REQ_FILE"
-#   exit 1
-# fi
+  apt_packages=(
+    libegl-dev
+    xvfb
+    libgl1-mesa-dri
+    libgl1-mesa-dev
+    libgl1-mesa-glx
+    libstdc++6
+  )
+  for pkg in "${apt_packages[@]}"; do
+    if ! dpkg -l | grep -q "$pkg"; then
+      log "APT 패키지 설치: $pkg"
+      sudo apt-get install -y "$pkg"
+    else
+      log "APT 패키지 이미 설치됨: $pkg"
+    fi
+  done
+
+  export LIBGL_DRIVERS_PATH="/usr/lib/x86_64-linux-gnu/dri/"
+  ln -sf /usr/lib/x86_64-linux-gnu/libstdc++.so.6 "$CONDA_PREFIX/lib/libstdc++.so.6"
+
+else
+  error "경로를 찾을 수 없습니다: $LIBERO_DIR  (third_party/LIBERO 가 있어야 합니다)"
+  exit 1
+fi
+
 
 # ===== FlashAttention2 (고정: 2.5.5, 선택) =====
 if [ "$INSTALL_FLASH_ATTN" -eq 1 ] && [ "$USE_CUDA" -eq 1 ]; then

@@ -56,9 +56,9 @@ python -m pip install -r requirements.txt
 
 # 6) PyTorch(CUDA 11.3) 설치
 python -m pip install \
-  torch==1.11.0+cu113 \
-  torchvision==0.12.0+cu113 \
-  torchaudio==0.11.0 \
+  torch \
+  torchvision \
+  torchaudio \
   --extra-index-url https://download.pytorch.org/whl/cu113
 
 # 7) LIBERO 패키지 설치 (개발 모드)
