@@ -54,27 +54,31 @@ hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ### libero-spatial
 ```bash
 OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
+MODEL_DIR="/home/jovyan/model-wclee"
 cd OPENVLA_PATH
-python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint /home/jovyan/model-wclee/openvla/openvla-7b-finetuned-libero-spatial   --task_suite_name libero_spatial   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
+python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-spatial   --task_suite_name libero_spatial   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
 ### libero_object
 ```bash
 OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
+MODEL_DIR="/home/jovyan/model-wclee"
 cd OPENVLA_PATH
-python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint /home/jovyan/model-wclee/openvla/openvla-7b-finetuned-libero-object   --task_suite_name libero_object   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
+python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-object   --task_suite_name libero_object   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
 ### libero_goal
 ```bash
 OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
+MODEL_DIR="/home/jovyan/model-wclee"
 cd OPENVLA_PATH
-python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint /home/jovyan/model-wclee/openvla/openvla-7b-finetuned-libero-goal   --task_suite_name libero_goal   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
+python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-goal   --task_suite_name libero_goal   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
 ### libero_10
 ```bash
 OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
+MODEL_DIR="/home/jovyan/model-wclee"
 cd OPENVLA_PATH
-python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint /home/jovyan/model-wclee/openvla/openvla-7b-finetuned-libero-10   --task_suite_name libero_10   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
+python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-10   --task_suite_name libero_10   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
