@@ -51,7 +51,7 @@ mkdir -p "$LOCAL_DIR"
 hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
-# Custom fine tuning
+# Custom VLA model
 Come soon
 
 # Deploy (evaluation)
