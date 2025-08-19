@@ -11,6 +11,7 @@ git submodule update --init --recursive third_party/LIBERO
 
 # Env setup (conda: openvla)
 ```bash
+cd PATH_TO_RSLA
 bash ./setup/openvla_setup.sh
 ```
 
