@@ -94,6 +94,7 @@ python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --
 # 리뷰 해 볼 만한 페이퍼 리스트 
 ### 모델
 - [OpenVLA] Kim, M. J., Pertsch, K., Karamcheti, S., Xiao, T., Balakrishna, A., Nair, S., Rafailov, R., Foster, E., Lam, G., Sanketi, P., Vuong, Q., Kollar, T., Burchfiel, B., Tedrake, R., Sadigh, D., Levine, S., Liang, P., & Finn, C. (2024). OpenVLA: An Open-Source Vision-Language-Action Model. http://arxiv.org/abs/2406.09246
+- [PrismaticVLM] Karamcheti, S., Nair, S., Balakrishna, A., Liang, P., Kollar, T., & Sadigh, D. (2024). Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models. http://arxiv.org/abs/2402.07865
 - [RT-2] Brohan, A., Brown, N., Carbajal, J., Chebotar, Y., Chen, X., Choromanski, K., Ding, T., Driess, D., Dubey, A., Finn, C., Florence, P., Fu, C., Arenas, M. G., Gopalakrishnan, K., Han, K., Hausman, K., Herzog, A., Hsu, J., Ichter, B., … Zitkovich, B. (2023). RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control. http://arxiv.org/abs/2307.15818
 - [RoboCLIP] Sontakke, Sumedh, et al. "Roboclip: One demonstration is enough to learn robot policies." Advances in Neural Information Processing Systems 36 (2023): 55681-55693.
 - [ICanTellWhatIamDoing] Wang, Z., Liang, B., Dhat, V., Brumbaugh, Z., Walker, N., Krishna, R., Cakmak, M., & Allen, P. G. (n.d.). I Can Tell What I Am Doing: Toward Real-World Natural Language Grounding of Robot Experiences.
