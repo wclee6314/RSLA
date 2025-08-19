@@ -14,7 +14,7 @@ git submodule update --init --recursive third_party/LIBERO
 bash ./setup/openvla_setup.sh
 ```
 
-# Download fine-tuned OpenVLA model via LoRA (r=32) on four LIBERO task suites
+# Download fine-tuned OpenVLA (==Prismatic-VLA) model via LoRA (r=32) on four LIBERO task suites
 
 ### libero-spatial
 ```bash
