@@ -89,5 +89,17 @@ cd OPENVLA_PATH
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-10   --task_suite_name libero_10   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
-# 리뷰 해 볼 만한 페이퍼 리스트
-- 
+# 리뷰 해 볼 만한 페이퍼 리스트 
+### 모델
+- [OpenVLA] Kim, M. J., Pertsch, K., Karamcheti, S., Xiao, T., Balakrishna, A., Nair, S., Rafailov, R., Foster, E., Lam, G., Sanketi, P., Vuong, Q., Kollar, T., Burchfiel, B., Tedrake, R., Sadigh, D., Levine, S., Liang, P., & Finn, C. (2024). OpenVLA: An Open-Source Vision-Language-Action Model. http://arxiv.org/abs/2406.09246
+- [RT-2] Brohan, A., Brown, N., Carbajal, J., Chebotar, Y., Chen, X., Choromanski, K., Ding, T., Driess, D., Dubey, A., Finn, C., Florence, P., Fu, C., Arenas, M. G., Gopalakrishnan, K., Han, K., Hausman, K., Herzog, A., Hsu, J., Ichter, B., … Zitkovich, B. (2023). RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control. http://arxiv.org/abs/2307.15818
+- [RoboCLIP] Sontakke, Sumedh, et al. "Roboclip: One demonstration is enough to learn robot policies." Advances in Neural Information Processing Systems 36 (2023): 55681-55693.
+- [ICanTellWhatIamDoing] Wang, Z., Liang, B., Dhat, V., Brumbaugh, Z., Walker, N., Krishna, R., Cakmak, M., & Allen, P. G. (n.d.). I Can Tell What I Am Doing: Toward Real-World Natural Language Grounding of Robot Experiences.
+
+### 비쥬얼 인코더
+- [DINOv2] Oquab, M., Darcet, T., Moutakanni, T., Vo, H., Szafraniec, M., Khalidov, V., Fernandez, P., Haziza, D., Massa, F., El-Nouby, A., Assran, M., Ballas, N., Galuba, W., Howes, R., Huang, P.-Y., Li, S.-W., Misra, I., Rabbat, M., Sharma, V., … Bojanowski, P. (2024). DINOv2: Learning Robust Visual Features without Supervision. http://arxiv.org/abs/2304.07193
+- [CLIP] Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning Transferable Visual Models From Natural Language Supervision. http://arxiv.org/abs/2103.00020
+- [SigLIP] Zhai, X., Mustafa, B., Kolesnikov, A., Beyer, L., & Deepmind, G. (n.d.). Sigmoid Loss for Language Image Pre-Training. https://github.
+
+### 데이터셋
+- [Open X-Embodiment] Embodiment Collaboration, O’Neill, A., Rehman, A., Gupta, A., Maddukuri, A., Gupta, A., Padalkar, A., Lee, A., Pooley, A., Gupta, A., Mandlekar, A., Jain, A., Tung, A., Bewley, A., Herzog, A., Irpan, A., Khazatsky, A., Rai, A., Gupta, A., … Lin, Z. (2025). Open X-Embodiment: Robotic Learning Datasets and RT-X Models. http://arxiv.org/abs/2310.08864
