@@ -67,6 +67,3 @@ Follow these steps to set up the environment:
    ```bash
    bash ./setup/openvla_setup.sh
    ```
-
-# Contributors
-- woo-cheol lee (wclee@dnotitia.com)

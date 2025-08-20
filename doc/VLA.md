@@ -23,7 +23,7 @@ cd <path_to_RSLA>/third_party/LIBERO
 python benchmark_scripts/download_libero_datasets.py
 ```
 
-### ??? task suites
+### "TBA" task suites
 ```bash
 
 ```
@@ -75,9 +75,8 @@ Coming soon
 | task=pick up the black bowl between the plate and the r... | task=pick up the alphabet soup and place it in the bask | task=open the middle drawer of the cabinet | task=put both the alphabet soup and the tomato sauce in...|
 
 #### Preset for running following benchmark suites
-go to openvla repository
 ```bash
-OPENVLA_PATH="<path_to_RSLA>/RSLA/third_party/openvla"
+OPENVLA_PATH="<path_to_RSLA>/third_party/openvla"
 cd $OPENVLA_PATH
 MODEL_DIR="/home/jovyan/model-wclee"
 ```
