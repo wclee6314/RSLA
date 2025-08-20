@@ -8,7 +8,7 @@
 set -euo pipefail
 
 # ================= 설정 (고정) =================
-ENV_NAME="openvla"             # 고정
+ENV_NAME="vla"             # 고정
 PY_VERSION="3.10"              # 고정
 TORCH_CUDA_VERSION="12.4"      # 고정 (PyTorch 메타패키지)
 INSTALL_FLASH_ATTN="${INSTALL_FLASH_ATTN:-1}"  # 1=설치, 0=건너뛰기
@@ -127,7 +127,8 @@ if [ -d "$LIBERO_DIR" ]; then
     numba \
     llvmlite \
     future \
-    pynput
+    pynput \
+    glfw 
 
   apt_packages=(
     libegl-dev
