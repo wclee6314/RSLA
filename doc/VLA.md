@@ -16,9 +16,21 @@ cd PATH_TO_RSLA
 bash ./setup/openvla_setup.sh
 ```
 
-# Download fine-tuned Prismatic-VLA(a.k.a. OpenVLA) model on four LIBERO task suites
+# Download Dataset
+### LIBERO task suites
+```bash
+cd <path_to_RSLA>/third_party/LIBERO
+python benchmark_scripts/download_libero_datasets.py
+```
 
-### libero-spatial
+### ??? task suites
+```bash
+
+```
+
+# Download fine-tuned Prismatic-VLA(a.k.a. OpenVLA) model
+
+### libero-spatial task suite
 ```bash
 HF_MODEL="openvla/openvla-7b-finetuned-libero-spatial"
 LOCAL_DIR="/home/jovyan/model-wclee/${HF_MODEL#*/}"  
@@ -26,7 +38,7 @@ mkdir -p "$LOCAL_DIR"
 hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
-### libero-object
+### libero-object task suite
 ```bash
 # 1) libero-object
 HF_MODEL="openvla/openvla-7b-finetuned-libero-object"
@@ -35,7 +47,7 @@ mkdir -p "$LOCAL_DIR"
 hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
-### libero-goal
+### libero-goal task suite
 ```bash
 # 2) libero-goal
 HF_MODEL="openvla/openvla-7b-finetuned-libero-goal"
@@ -44,7 +56,7 @@ mkdir -p "$LOCAL_DIR"
 hf download "$HF_MODEL" --local-dir "$LOCAL_DIR"
 ```
 
-### libero-10
+### libero-10 task suite
 ```bash
 # 3) libero-10
 HF_MODEL="openvla/openvla-7b-finetuned-libero-10"
@@ -62,35 +74,31 @@ Coming soon
 | **libero-spatial** | **libero-object** | **libero-goal** | **libero-10** |
 | task=pick up the black bowl between the plate and the r... | task=pick up the alphabet soup and place it in the bask | task=open the middle drawer of the cabinet | task=put both the alphabet soup and the tomato sauce in...|
 
-### libero-spatial
+#### Preset for running following benchmark suites
+go to openvla repository
 ```bash
-OPENVLA_PATH="/home/jovyan/workspace/wclee6314/RSLA/third_party/openvla"
-MODEL_DIR="/home/jovyan/model-wclee"
+OPENVLA_PATH="<path_to_RSLA>/RSLA/third_party/openvla"
 cd $OPENVLA_PATH
+MODEL_DIR="/home/jovyan/model-wclee"
+```
+
+### case 1) libero-spatial
+```bash
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-spatial   --task_suite_name libero_spatial   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
-### libero_object
+### case 2) libero_object
 ```bash
-OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
-MODEL_DIR="/home/jovyan/model-wclee"
-cd $OPENVLA_PATH
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-object   --task_suite_name libero_object   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
-### libero_goal
+### case 3) libero_goal
 ```bash
-OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
-MODEL_DIR="/home/jovyan/model-wclee"
-cd $OPENVLA_PATH
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-goal   --task_suite_name libero_goal   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
-### libero_10
+### case 4) libero_10
 ```bash
-OPENVLA_PATH="/home/jovyan/workspace/RSLA/third_party/openvla"
-MODEL_DIR="/home/jovyan/model-wclee"
-cd $OPENVLA_PATH
 python experiments/robot/libero/run_libero_eval.py   --model_family openvla   --pretrained_checkpoint $MODEL_DIR/openvla/openvla-7b-finetuned-libero-10   --task_suite_name libero_10   --center_crop True --use_wandb True --wandb_project openvla_eval --wandb_entity wclee-korea-advanced-institute-of-science-and-technology
 ```
 
