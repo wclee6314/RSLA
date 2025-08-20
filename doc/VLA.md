@@ -16,7 +16,7 @@ cd PATH_TO_RSLA
 bash ./setup/openvla_setup.sh
 ```
 
-# Download fine-tuned Prismatic-VLA(a.k.a. OpenVLA) model via LoRA on four LIBERO task suites
+# Download fine-tuned Prismatic-VLA(a.k.a. OpenVLA) model on four LIBERO task suites
 
 ### libero-spatial
 ```bash
