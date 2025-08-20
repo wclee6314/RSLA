@@ -60,6 +60,7 @@ Coming soon
 | ![libero-spatial](./video/libero_spatial.gif) | ![libero-object](./video/libero_object.gif) | ![libero-goal](./video/libero_goal.gif) | ![libero-10](./video/libero_10.gif) |
 |---|---|---|---|
 | **libero-spatial** | **libero-object** | **libero-goal** | **libero-10** |
+| task=pick up the black bowl between the plate and the r... | task=pick up the alphabet soup and place it in the bask | task=open the middle drawer of the cabinet | task=put both the alphabet soup and the tomato sauce in...|
 
 ### libero-spatial
 ```bash
